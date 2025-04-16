@@ -61,7 +61,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                portfolio: {
+                    purple: '#9b87f5',
+                    darkPurple: '#6E59A5',
+                    lightPurple: '#E5DEFF',
+                    darkBg: '#1A1F2C',
+                    lightBg: '#F6F7F9',
+                    accent: '#F97316'
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +92,66 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'fade-in': {
+                    '0%': {
+                        opacity: '0',
+                        transform: 'translateY(20px)'
+                    },
+                    '100%': {
+                        opacity: '1',
+                        transform: 'translateY(0)'
+                    }
+                },
+                'slide-in': {
+                    '0%': {
+                        opacity: '0',
+                        transform: 'translateX(-20px)'
+                    },
+                    '100%': {
+                        opacity: '1',
+                        transform: 'translateX(0)'
+                    }
+                },
+                'pulse-light': {
+                    '0%, 100%': {
+                        boxShadow: '0 0 0 0 rgba(155, 135, 245, 0.4)'
+                    },
+                    '50%': {
+                        boxShadow: '0 0 0 10px rgba(155, 135, 245, 0)'
+                    }
+                },
+                'float': {
+                    '0%, 100%': {
+                        transform: 'translateY(0)'
+                    },
+                    '50%': {
+                        transform: 'translateY(-10px)'
+                    }
+                },
+                'rotate-slow': {
+                    '0%': {
+                        transform: 'rotate(0deg)'
+                    },
+                    '100%': {
+                        transform: 'rotate(360deg)'
+                    }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'fade-in': 'fade-in 0.6s ease-out',
+                'slide-in': 'slide-in 0.6s ease-out',
+                'pulse-light': 'pulse-light 2s infinite',
+                'float': 'float 3s ease-in-out infinite',
+                'rotate-slow': 'rotate-slow 8s linear infinite'
+			},
+            fontFamily: {
+                'sans': ['Inter', 'sans-serif'],
+                'poppins': ['Poppins', 'sans-serif'],
+                'montserrat': ['Montserrat', 'sans-serif']
+            }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
