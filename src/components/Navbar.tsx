@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -46,6 +47,12 @@ const Navbar = () => {
               {link.name}
             </button>
           ))}
+           <Link
+    to="/videoCV"
+    className="nav-link font-medium text-left"
+  >
+    Video CV
+  </Link>
         </div>
 
 
@@ -79,6 +86,12 @@ const Navbar = () => {
                 {link.name}
               </button>
             ))}
+             <Link
+    to="/videoCV"
+    className="nav-link font-medium text-left"
+  >
+    Video CV
+  </Link>
           </div>
 
         </div>
