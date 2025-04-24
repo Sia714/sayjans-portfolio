@@ -36,11 +36,11 @@ const Education = () => {
     },
     {
       text: "Awarded a Gold Badge for C language on HackerRank (July 2023)",
-      badge: "/public/assets/cg.png"
+      badge: "/assets/cg.png"
     },
     {
       text: "Achieved a Silver Badge for Python on HackerRank (December 2022)",
-      badge: "/public/assets/ps.png"
+      badge: "/assets/ps.png"
     },
   ];
 

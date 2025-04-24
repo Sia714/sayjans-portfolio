@@ -141,7 +141,7 @@ const Hero = () => {
                   <Link to="/videocv">
                     <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden shadow-lg ring-2 ring-green-400 hover:scale-105 transition-all duration-300">
                       <video
-                        src="/public/assets/videoCV.mp4"
+                        src="/assets/videoCV.mp4"
                         autoPlay
                         loop
                         muted

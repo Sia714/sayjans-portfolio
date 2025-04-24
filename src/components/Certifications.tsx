@@ -15,7 +15,7 @@ const Certifications = () => {
             provider: "MongoDB",
             date: "July 2024",
             description: "Fundamentals of MongoDB database management and NoSQL concepts",
-            image: "/public/assets/mongo.jpg",
+            image: "/assets/mongo.jpg",
             credentialUrl: "https://learn.mongodb.com/c/3FzEhdwJSju_NWUMU1d06A"
         },
 
@@ -24,14 +24,14 @@ const Certifications = () => {
             provider: "Coursera",
             date: "February 2024",
             description: "Advanced techniques in AI prompt engineering",
-            image: "/public/assets/prompt.png",
+            image: "/assets/prompt.png",
             credentialUrl: "https://ibb.co/7dRK8bh4"
         }, {
             title: "Become a Full-Stack Web Developer",
             provider: "LinkedIn Learning",
             date: "February 2023",
             description: "Complete full-stack development training",
-            image: "/public/assets/full.png",
+            image: "/assets/full.png",
             credentialUrl: "https://www.linkedin.com/learning/certificates/dc461a4001a051ccc94b4516c4629c7c4aea1860fbe8fc006ccf64b8c3d2a709"
         },
         {
@@ -39,7 +39,7 @@ const Certifications = () => {
             provider: "Quick Heal Academy, Microsoft & DSCI",
             date: "February 2023",
             description: "Cybersecurity fundamentals and best practices",
-            image: "/public/assets/csec.png",
+            image: "/assets/csec.png",
             credentialUrl: "https://ibb.co/Y7kxDySR"
         },
         {
@@ -47,7 +47,7 @@ const Certifications = () => {
             provider: "HackerRank",
             date: "November 2022",
             description: "Python programming fundamentals",
-            image: "/public/assets/py.png",
+            image: "/assets/py.png",
             credentialUrl: "https://www.hackerrank.com/certificates/6b5769533377"
         }
     ];
@@ -58,14 +58,14 @@ const Certifications = () => {
             provider: "MongoDB",
             date: "July 2024",
             description: "Fundamentals of MongoDB database management and NoSQL concepts",
-            image: "/public/assets/mongo.jpg",
+            image: "/assets/mongo.jpg",
             credentialUrl: "https://learn.mongodb.com/c/3FzEhdwJSju_NWUMU1d06A"
         }, {
             title: "Computer Architecture And Computer Organization Masterclass",
             provider: "Udemy",
             date: "November 2023",
             description: "Comprehensive understanding of computer architecture and organization principles",
-            image: "/public/assets/cod.jpg",
+            image: "/assets/cod.jpg",
             credentialUrl: "https://www.udemy.com/certificate/UC-4f5cb46f-81ca-41be-bc26-19e69e0fd588/"
         },
         {
@@ -80,7 +80,7 @@ const Certifications = () => {
             provider: "Coursera",
             date: "February 2024",
             description: "Advanced techniques in AI prompt engineering",
-            image: "/public/assets/prompt.png",
+            image: "/assets/prompt.png",
             credentialUrl: "https://ibb.co/7dRK8bh4"
         },
         {
