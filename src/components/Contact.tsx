@@ -1,6 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import AnimatedBackground from "./AnimatedBackground";
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,25 +58,23 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-800">
-      <div className="container mx-auto px-6">
-        <h2
-          className={`section-title transition-all duration-700 ${
-            isVisible ? "opacity-100" : "opacity-0 -translate-y-4"
-          }`}
-        >
-          Contact Me
+    <section id="contact" className="relative py-20 overflow-hidden">
+      <AnimatedBackground />
+
+      <div className="container mx-auto px-6 relative z-10">
+        <h2 className={`section-title transition-all duration-700 text-black dark:text-white ${isVisible ? "opacity-100" : "opacity-0 -translate-y-4"
+          }`}>
+          Contact
         </h2>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div
-            className={`transition-all duration-700 delay-200 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
-            }`}
+            className={`transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+              }`}
           >
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-lg p-8">
-              <h3 className="text-xl font-semibold mb-6">Get In Touch</h3>
-              <p className="text-gray-700 dark:text-gray-300 mb-8">
+            <div className="bg-white/10 dark:bg-black/30 backdrop-blur-sm rounded-lg shadow-lg p-8 border border-black/20 dark:border-white/20">
+              <h3 className="text-xl font-semibold mb-6 text-black dark:text-white">Get In Touch</h3>
+              <p className="text-black dark:text-white mb-8">
                 Feel free to reach out if you have any questions or if you'd
                 like to discuss potential opportunities. I'm always open to new
                 challenges!
@@ -84,12 +82,12 @@ const Contact = () => {
 
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <Mail className="w-5 h-5 text-portfolio-purple mt-1 mr-4" />
+                  <Mail className="w-5 h-5 text-black dark:text-white mt-1 mr-4" />
                   <div>
-                    <h4 className="font-medium">Email</h4>
+                    <h4 className="font-medium text-black dark:text-white">Email</h4>
                     <a
                       href="mailto:sayjan7777@gmail.com"
-                      className="text-gray-700 dark:text-gray-300 hover:text-portfolio-purple transition-colors"
+                      className="text-black dark:text-white hover:text-black/80 dark:hover:text-white/80 transition-colors"
                     >
                       sayjan7777@gmail.com
                     </a>
@@ -97,12 +95,12 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <Phone className="w-5 h-5 text-portfolio-purple mt-1 mr-4" />
+                  <Phone className="w-5 h-5 text-black dark:text-white mt-1 mr-4" />
                   <div>
-                    <h4 className="font-medium">Phone</h4>
+                    <h4 className="font-medium text-black dark:text-white">Phone</h4>
                     <a
                       href="tel:+919877542077"
-                      className="text-gray-700 dark:text-gray-300 hover:text-portfolio-purple transition-colors"
+                      className="text-black dark:text-white hover:text-black/80 dark:hover:text-white/80 transition-colors"
                     >
                       +91-9877542077
                     </a>
@@ -110,10 +108,10 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <MapPin className="w-5 h-5 text-portfolio-purple mt-1 mr-4" />
+                  <MapPin className="w-5 h-5 text-black dark:text-white mt-1 mr-4" />
                   <div>
-                    <h4 className="font-medium">Location</h4>
-                    <p className="text-gray-700 dark:text-gray-300">
+                    <h4 className="font-medium text-black dark:text-white">Location</h4>
+                    <p className="text-black dark:text-white">
                       Punjab, India
                     </p>
                   </div>
@@ -121,17 +119,17 @@ const Contact = () => {
               </div>
 
               <div className="mt-8">
-                <h4 className="font-medium mb-3">Connect with me</h4>
+                <h4 className="font-medium mb-3 text-black dark:text-white">Connect with me</h4>
                 <div className="flex gap-4">
                   <a
                     href="https://www.linkedin.com/in/sayjan-j-singh/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                    className="p-2 bg-black/10 dark:bg-black/30 rounded-full shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-black/20 dark:border-white/20"
                     aria-label="LinkedIn"
                   >
                     <svg
-                      className="w-5 h-5 text-[#0A66C2]"
+                      className="w-5 h-5 text-black dark:text-white"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -143,11 +141,11 @@ const Contact = () => {
                     href="https://github.com/Sia714"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                    className="p-2 bg-black/10 dark:bg-black/30 rounded-full shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-black/20 dark:border-white/20"
                     aria-label="GitHub"
                   >
                     <svg
-                      className="w-5 h-5 text-gray-800 dark:text-white"
+                      className="w-5 h-5 text-black dark:text-white"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -159,11 +157,11 @@ const Contact = () => {
                     href="https://leetcode.com/u/Sia714"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                    className="p-2 bg-black/10 dark:bg-black/30 rounded-full shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-black/20 dark:border-white/20"
                     aria-label="LeetCode"
                   >
                     <svg
-                      className="w-5 h-5 text-[#FFA116]"
+                      className="w-5 h-5 text-black dark:text-white"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -177,20 +175,18 @@ const Contact = () => {
           </div>
 
           <div
-            className={`transition-all duration-700 delay-400 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
-            }`}
+            className={`transition-all duration-700 delay-400 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+              }`}
           >
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-lg shadow-lg p-8">
-              <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
+            <div className="bg-white/10 dark:bg-black/30 backdrop-blur-sm rounded-lg shadow-lg p-8 border border-black/20 dark:border-white/20">
+              <h3 className="text-xl font-semibold mb-6 text-black dark:text-white">Send a Message</h3>
 
               {formStatus.isSubmitted ? (
                 <div
-                  className={`p-4 rounded-lg mb-6 ${
-                    formStatus.isError
-                      ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
-                      : "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
-                  }`}
+                  className={`p-4 rounded-lg mb-6 ${formStatus.isError
+                    ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
+                    : "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
+                    }`}
                 >
                   {formStatus.message}
                 </div>
@@ -199,7 +195,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium mb-2"
+                      className="block text-sm font-medium mb-2 text-black dark:text-white"
                     >
                       Name
                     </label>
@@ -210,7 +206,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-portfolio-purple dark:bg-gray-800 dark:text-gray-200"
+                      className="w-full px-4 py-2 rounded-md border border-black/20 dark:border-white/20 bg-white/10 dark:bg-black/30 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-black/20 dark:focus:ring-white/20"
                       placeholder="Your name"
                     />
                   </div>
@@ -218,7 +214,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium mb-2"
+                      className="block text-sm font-medium mb-2 text-black dark:text-white"
                     >
                       Email
                     </label>
@@ -229,7 +225,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-portfolio-purple dark:bg-gray-800 dark:text-gray-200"
+                      className="w-full px-4 py-2 rounded-md border border-black/20 dark:border-white/20 bg-white/10 dark:bg-black/30 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-black/20 dark:focus:ring-white/20"
                       placeholder="Your email"
                     />
                   </div>
@@ -237,7 +233,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium mb-2"
+                      className="block text-sm font-medium mb-2 text-black dark:text-white"
                     >
                       Message
                     </label>
@@ -248,14 +244,14 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-portfolio-purple dark:bg-gray-800 dark:text-gray-200"
+                      className="w-full px-4 py-2 rounded-md border border-black/20 dark:border-white/20 bg-white/10 dark:bg-black/30 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-black/20 dark:focus:ring-white/20"
                       placeholder="Your message"
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    className="btn-primary w-full flex items-center justify-center gap-2"
+                    className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-purple-900 dark:bg-portfolio-purple text-white hover:bg-purple-800 dark:hover:bg-portfolio-purple-dark transition-colors"
                   >
                     <Send className="w-4 h-4" />
                     Send Message

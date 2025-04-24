@@ -5,51 +5,49 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-8 bg-gray-900 text-white">
+    <footer className="py bg-gray-900 text-white ">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center">
           <a href="#" className="text-2xl font-bold text-portfolio-purple mb-4">
-            Sayjan<span className="text-portfolio-accent">.</span>
+            Sayjan J Singh
           </a>
-          
+
           <div className="flex gap-6 mb-6">
-            <a 
-              href="https://www.linkedin.com/in/sayjan-j-singh/" 
+            <a
+              href="https://www.linkedin.com/in/sayjan-j-singh/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-portfolio-purple transition-colors"
             >
               LinkedIn
             </a>
-            <a 
-              href="https://github.com/Sia714" 
+            <a
+              href="https://github.com/Sia714"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-portfolio-purple transition-colors"
             >
               GitHub
             </a>
-            <a 
-              href="https://leetcode.com/u/Sia714" 
+            <a
+              href="https://leetcode.com/u/Sia714"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-portfolio-purple transition-colors"
             >
               LeetCode
             </a>
-            <a 
-              href="mailto:sayjan7777@gmail.com" 
+            <a
+              href="mailto:sayjan7777@gmail.com"
               className="hover:text-portfolio-purple transition-colors"
             >
               Email
             </a>
           </div>
-          
+
           <div className="text-gray-400 flex items-center">
             <p>
-              &copy; {currentYear} Sayjan J Singh. Built with
-              <Heart className="w-4 h-4 text-red-500 mx-1 inline" />
-              using React & TailwindCSS
+              &copy; {currentYear} Sayjan J Singh. Built using React & TailwindCSS
             </p>
           </div>
         </div>

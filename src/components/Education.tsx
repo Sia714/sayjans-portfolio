@@ -1,6 +1,6 @@
-
 import { useEffect, useState } from "react";
 import { BookOpen, Calendar } from "lucide-react";
+import AnimatedBackground from "./AnimatedBackground";
 
 const Education = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,30 +29,23 @@ const Education = () => {
     },
   ];
 
-  const certifications = [
-    "The Bits and Bytes of Computer Networking, Coursera-April 2024",
-    "Prompt Engineering for ChatGPT, Coursera-February 2024",
-    "Become a Full-Stack Web Developer, LinkedIn Learning-February 2023",
-    "CyberShikshaa Fundamentals, conducted by Quick Heal Academy, Microsoft & DSCI-February 2023",
-    "Python(Basic), Hackerrank-November 2022",
-  ];
-
   const achievements = [
-    "Solved 300+ problems on leetCode, GFG and CodingNinjas (Till December 2024)",
-    "Awarded a Gold Badge for C language on HackerRank (July 2023)",
-    "Achieved a Silver Badge for Python on HackerRank (December 2022)",
-  ];
-
-  const extraCurricular = [
     {
-      title: "SOCH: Autism Society of Punjab",
-      timeline: "July 2023 – August 2023",
-      activities: [
-        "Led community outreach efforts, designing awareness posters for the One Race Marathon (Oct 8) and a fundraising exhibition (Aug 28-29).",
-        "Volunteered 30+ hours at awareness events, including marathon coordination and fundraising stalls, supporting autism awareness initiatives.",
-      ],
+      text: "Solved 300+ problems on leetCode, GFG and CodingNinjas (Till December 2024)",
+      badge: null
+    },
+    {
+      text: "Awarded a Gold Badge for C language on HackerRank (July 2023)",
+      badge: "/src/images/cg.png"
+    },
+    {
+      text: "Achieved a Silver Badge for Python on HackerRank (December 2022)",
+      badge: "/src/images/ps.png"
     },
   ];
+
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,30 +58,28 @@ const Education = () => {
       }
     };
 
+
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check on initial load
-    return () => window.removeEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
-    <section id="education" className="py-20 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-6">
-        <h2
-          className={`section-title transition-all duration-700 ${
-            isVisible ? "opacity-100" : "opacity-0 -translate-y-4"
-          }`}
-        >
+    <section id="education" className="relative py-20 overflow-hidden">
+      <AnimatedBackground />
+
+      <div className="container mx-auto px-6 relative z-10">
+        <h2 className={`section-title transition-all duration-700 text-black dark:text-white ${isVisible ? "opacity-100" : "opacity-0 -translate-y-4"
+          }`}>
           Education
         </h2>
 
-        <div
-          className={`mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 transition-all duration-700 delay-200 ${
-            isVisible ? "opacity-100" : "opacity-0 translate-y-4"
-          }`}
-        >
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 transition-all duration-700 delay-200">
           <div>
-            <h3 className="text-xl font-semibold mb-6 flex items-center">
-              <BookOpen className="w-5 h-5 text-portfolio-purple mr-2" />
+            <h3 className="text-xl font-semibold mb-6 flex items-center text-black dark:text-white">
+              <BookOpen className="w-5 h-5 text-black dark:text-white mr-2" />
               Academic Background
             </h3>
 
@@ -96,22 +87,22 @@ const Education = () => {
               {educationData.map((edu, index) => (
                 <div
                   key={index}
-                  className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+                  className="bg-white/10 dark:bg-black/30 backdrop-blur-sm rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border border-black/20 dark:border-white/20"
                 >
-                  <h4 className="text-lg font-semibold">
+                  <h4 className="text-lg font-semibold text-black dark:text-white">
                     {edu.institution}
-                    <span className="text-sm font-normal text-gray-600 dark:text-gray-400 ml-2">
+                    <span className="text-sm font-normal text-black/80 dark:text-white/80 ml-2">
                       ({edu.location})
                     </span>
                   </h4>
-                  <p className="text-portfolio-purple font-medium mt-1">
+                  <p className="text-black dark:text-white font-medium mt-1">
                     {edu.degree}
                   </p>
-                  <div className="flex items-center text-gray-600 dark:text-gray-400 mt-2">
+                  <div className="flex items-center text-black/80 dark:text-white/80 mt-2">
                     <Calendar className="w-4 h-4 mr-2" />
                     <span>{edu.timeline}</span>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300 mt-2">
+                  <p className="text-black dark:text-white mt-2">
                     {edu.score}
                   </p>
                 </div>
@@ -121,51 +112,22 @@ const Education = () => {
 
           <div className="space-y-12">
             <div>
-              <h3 className="text-xl font-semibold mb-6">Certifications</h3>
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-                <ul className="list-disc pl-5 space-y-3 text-gray-700 dark:text-gray-300">
-                  {certifications.map((cert, index) => (
-                    <li key={index} className="transition-all hover:text-portfolio-purple">
-                      {cert}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-6">Achievements</h3>
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-                <ul className="list-disc pl-5 space-y-3 text-gray-700 dark:text-gray-300">
+              <h3 className="text-xl font-semibold mb-6 text-black dark:text-white">Achievements</h3>
+              <div className="bg-white/10 dark:bg-black/30 backdrop-blur-sm rounded-lg shadow-md p-6 border border-black/20 dark:border-white/20">
+                <ul className="space-y-3 text-black dark:text-white">
                   {achievements.map((achievement, index) => (
-                    <li key={index} className="transition-all hover:text-portfolio-purple">
-                      {achievement}
+                    <li key={index} className="flex items-start gap-3 transition-all hover:text-black/80 dark:hover:text-white/80">
+                      {achievement.badge && (
+                        <img
+                          src={achievement.badge}
+                          alt="Badge"
+                          className="w-8 h-8 object-contain"
+                        />
+                      )}
+                      <span>{achievement.text}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-6">
-                Extracurricular Activities
-              </h3>
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-                {extraCurricular.map((activity, index) => (
-                  <div key={index}>
-                    <h4 className="font-semibold flex items-center justify-between">
-                      <span>{activity.title}</span>
-                      <span className="text-sm text-gray-600 dark:text-gray-400">
-                        {activity.timeline}
-                      </span>
-                    </h4>
-                    <ul className="list-disc pl-5 mt-3 space-y-2 text-gray-700 dark:text-gray-300">
-                      {activity.activities.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
               </div>
             </div>
           </div>

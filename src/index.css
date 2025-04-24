@@ -85,17 +85,30 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   * {
     @apply border-border;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   html {
     @apply scroll-smooth;
+    scroll-behavior: smooth;
   }
 
   body {
     @apply bg-background text-foreground font-poppins transition-colors duration-300;
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
@@ -103,41 +116,41 @@
   .section-title {
     @apply text-3xl font-bold mb-6 font-montserrat relative inline-block;
   }
-  
+
   .section-title::after {
     content: '';
     @apply absolute -bottom-2 left-0 w-1/2 h-1 bg-portfolio-purple rounded-full;
   }
-  
+
   .skill-badge {
     @apply px-3 py-1 rounded-full text-sm font-medium bg-portfolio-lightPurple text-portfolio-darkPurple;
   }
-  
+
   .nav-link {
     @apply relative hover:text-portfolio-purple transition-colors duration-300;
   }
-  
+
   .nav-link::after {
     content: '';
     @apply absolute left-0 bottom-0 w-0 h-0.5 bg-portfolio-purple transition-all duration-300;
   }
-  
+
   .nav-link:hover::after {
     @apply w-full;
   }
-  
+
   .project-card {
     @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
-  
+
   .glass-card {
     @apply bg-white/10 backdrop-blur-lg border border-white/20 dark:bg-black/20 dark:border-white/10 rounded-xl shadow-lg;
   }
-  
+
   .btn-primary {
     @apply px-6 py-2 bg-portfolio-purple text-white rounded-full font-medium transition-all duration-300 hover:bg-portfolio-darkPurple hover:shadow-lg transform hover:-translate-y-0.5;
   }
-  
+
   .btn-outline {
     @apply px-6 py-2 border border-portfolio-purple text-portfolio-purple dark:text-white rounded-full font-medium transition-all duration-300 hover:bg-portfolio-purple hover:text-white dark:hover:text-white;
   }
