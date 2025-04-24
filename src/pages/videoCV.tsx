@@ -63,7 +63,7 @@ const VideoCV = () => {
                 <div className={`flex items-center justify-center transition-all duration-700 delay-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}>
                     <div className="bg-white/10 dark:bg-black/30 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-black/20 dark:border-white/20">
                         <video
-                            src="/src/images/videoCV.mp4"
+                            src="/assets/videoCV.mp4"
                             controls
                             className="max-w-full max-h-[80vh] rounded-lg shadow-lg"
                         />
