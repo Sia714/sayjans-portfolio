@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import ThemeToggle from "@/components/ThemeToggle";
 import Hero from "@/components/Hero";

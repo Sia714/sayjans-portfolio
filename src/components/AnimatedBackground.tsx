@@ -4,7 +4,7 @@ const AnimatedBackground = () => {
     return (
         <>
             {/* Animated background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-200 via-teal-200 to-orange-300 dark:from-orange-800 dark:via-teal-800 dark:to-orange-900 opacity-90 animate-gradient"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#f7a072] via-[#7bb7b7] to-[#f7c59f] dark:from-orange-800 dark:via-teal-800 dark:to-orange-900 opacity-90 animate-gradient"></div>
 
             {/* Animated dots */}
             <div className="absolute inset-0">

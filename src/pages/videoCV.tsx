@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import AnimatedBackground from "../components/AnimatedBackground";
 
 const InteractiveBackground = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

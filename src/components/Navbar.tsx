@@ -33,7 +33,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#" className="text-2xl font-bold text-portfolio-purple">
-          Portfolio
+          Sayjan J. Singh
         </a>
 
         {/* Desktop Navigation */}
