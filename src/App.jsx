@@ -9,7 +9,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/videocv" element={<VideoCV />} />
+          <Route path="/videoCV" element={<VideoCV />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

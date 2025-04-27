@@ -16,7 +16,7 @@ const Navbar = () => {
     { name: "Contact", href: "#contact" },
   ];
 
-  const scrolltoSection = (sectionId: string) => {
+  const scrolltoSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, FileText, Code } from "lucide-react";
+import { Github, Linkedin, Mail, Code } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -6,7 +6,7 @@ const InteractiveBackground = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e) => {
       setMousePosition({
         x: e.clientX,
         y: e.clientY
@@ -124,7 +124,7 @@ const Hero = () => {
                 className="p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 aria-label="LeetCode"
               >
-                <FileText className="w-5 h-5 text-orange-500" />
+                <Code className="w-5 h-5 text-orange-500" />
               </a>
             </div>
           </div>
@@ -138,7 +138,7 @@ const Hero = () => {
               <div className="absolute top-4 left-4 right-4 bottom-4 bg-portfolio-lightPurple rounded-full"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg animate-float">
-                  <Link to="/videocv">
+                  <Link to="/videoCV">
                     <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden shadow-lg ring-2 ring-green-400 hover:scale-105 transition-all duration-300">
                       <video
                         src="/assets/videoCV.mp4"
@@ -161,3 +161,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
