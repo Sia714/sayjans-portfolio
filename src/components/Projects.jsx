@@ -18,6 +18,7 @@ const Projects = () => {
         "All actions are restricted to a given timeline to maintain exam integrity.",
       ],
       tech: "React, Node.js, Express.js, MongoDB, Tailwind CSS",
+      link: "https://quiz-system-psi.vercel.app/",
       github: "https://github.com/Sia714/quiz_system",
     },
     {
@@ -30,6 +31,7 @@ const Projects = () => {
         "Optimized database queries by 25%",
       ],
       tech: "Spring Boot, MySQL, JPA, React",
+      link: "#",
       github: "https://github.com/Sia714/Banking-management-system",
     },
     {
@@ -42,6 +44,7 @@ const Projects = () => {
         "Offered three difficulty levels and customizable maze sizes, ensuring a tailored user experience.",
       ],
       tech: "HTML, CSS, JavaScript, Bootstrap",
+      link: "#",
       github: "https://github.com/Sia714/Maze-solver",
     },
     ,
@@ -56,6 +59,7 @@ const Projects = () => {
         "Enabled responsive design for seamless cross-device navigation and mobile compatibility.",
       ],
       tech: "HTML, CSS, JavaScript, Bootstrap",
+      link: "#",
       github: "https://github.com/Sia714/Ready-Set-Banquet",
     },
 
@@ -73,6 +77,7 @@ const Projects = () => {
         "Included a dark mode toggle, input validation, and navigation drawer using menus and intents.",
       ],
       tech: "Kotlin, Android SDK, Firebase Firestore, MVVM, ViewBinding",
+      link: "#",
       github: "https://github.com/Sia714/PortfolioApp",
     }, {
       title: "WorkGrow",
@@ -84,6 +89,7 @@ const Projects = () => {
         "Designed intuitive UI with collapsible course sections, topic filtering, and mentor availability indicators.",
       ],
       tech: "Kotlin, Firebase, Android SDK",
+      link: "#",
       github: "https://github.com/Sia714/WorkGrow",
     },
     {
@@ -97,6 +103,7 @@ const Projects = () => {
         "Used D3.js-inspired styling and responsive layout for optimal cross-device experience.",
       ],
       tech: "Node.js, React.js, Material UI (MUI), JSON",
+      link: "#",
       github: "https://github.com/Sia714/DataFunnel",
     },
     {
@@ -110,6 +117,7 @@ const Projects = () => {
         "Added search functionality to filter displayed results in real-time.",
       ],
       tech: "Kotlin, Android SDK, MVVM",
+      link: "#",
       github: "https://github.com/Sia714/Two-way-pagination",
     },
     {
@@ -123,6 +131,7 @@ const Projects = () => {
         "Enhanced UX with custom radio buttons and a gradient fade effect for product descriptions.",
       ],
       tech: "Kotlin, Android SDK",
+      link: "#",
       github: "https://github.com/Sia714/Android/tree/da0dfdda45acb3aab398fffdcc11ba4813996c3b/FlowerShop",
     },
   ];
@@ -214,6 +223,16 @@ const Projects = () => {
                   </p>
                 </div>
                 <div className="flex space-x-4">
+                  {project.link!="#"?    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                     className="flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-black/40 rounded-lg text-black dark:text-white hover:bg-black/20 dark:hover:bg-black/50 transition-colors border border-black/20 dark:border-white/20 hover:border-black/30 dark:hover:border-white/30"
+                   >
+                      <ExternalLink className="w-4 h-4 mr-1" />
+                      Demo
+                    </a>:" "}
+                     
                   <a
                     href={project.github}
                     target="_blank"
@@ -260,6 +279,15 @@ const Projects = () => {
                   </p>
                 </div>
                 <div className="flex space-x-4">
+                         <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-black/40 rounded-lg text-black dark:text-white hover:bg-black/20 dark:hover:bg-black/50 transition-colors border border-black/20 dark:border-white/20 hover:border-black/30 dark:hover:border-white/30"
+                  >
+                      <ExternalLink className="w-4 h-4 mr-1" />
+                      Demo
+                    </a>
                   <a
                     href={project.github}
                     target="_blank"
@@ -269,6 +297,7 @@ const Projects = () => {
                     <Github className="w-4 h-4" />
                     <span className="text-sm font-medium">View Code</span>
                   </a>
+                  
                 </div>
               </div>
             ))}
