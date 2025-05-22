@@ -23,7 +23,7 @@ const Projects = () => {
     },
     {
       title: "Portfolio Website",
-      timeline: "March 2025 – Present",
+      timeline: "April 2025",
       description:
         "A sleek portfolio website built with React, Tailwind CSS, and Vite, showcasing projects, skills, and contact info with smooth animations and responsive design.",
       features: [
