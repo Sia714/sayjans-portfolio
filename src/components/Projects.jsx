@@ -3,10 +3,10 @@ import { ExternalLink, Github } from "lucide-react";
 import AnimatedBackground from "./AnimatedBackground";
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState("fullstack");
+  const [activeTab, setActiveTab] = useState("webDev");
   const [isVisible, setIsVisible] = useState(false);
 
-  const fullStackProjects = [
+  const webDevProjects = [
     {
       title: "Quiz Management System",
       timeline: "March 2025 – Present",
@@ -20,6 +20,22 @@ const Projects = () => {
       tech: "React, Node.js, Express.js, MongoDB, Tailwind CSS",
       link: "https://quiz-system-psi.vercel.app/",
       github: "https://github.com/Sia714/quiz_system",
+    },
+    {
+      title: "Portfolio Website",
+      timeline: "March 2025 – Present",
+      description:
+        "A sleek portfolio website built with React, Tailwind CSS, and Vite, showcasing projects, skills, and contact info with smooth animations and responsive design.",
+      features: [
+        "Implemented a clean UI using Tailwind CSS for responsive and modern styling.",
+        "Utilized Vite for super fast development and optimized build process.",
+        "Incorporated dynamic project tabs with smooth transitions and animated backgrounds.",
+        "Built reusable React components to keep the codebase modular and maintainable.",
+        "Added dark mode toggle for user preference and better accessibility.",
+      ],
+      tech: "React, Tailwind CSS, JavaScript, Vite",
+      link: "https://sayjan-portfolio.vercel.app/",
+      github: "https://github.com/Sia714/portfolio-website",
     },
     {
       title: "Banking Management System",
@@ -169,13 +185,13 @@ const Projects = () => {
         <div className="mt-8 flex justify-center transition-all duration-700 delay-200">
           <div className="bg-white/10 dark:bg-black/30 p-1 rounded-full inline-flex border border-black/20 dark:border-white/20">
             <button
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${activeTab === "fullstack"
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${activeTab === "webDev"
                 ? "bg-purple-900 dark:bg-portfolio-purple text-white dark:text-black"
                 : "text-black hover:bg-black/20 dark:text-white dark:hover:bg-white/20"
                 }`}
-              onClick={() => activateTab("fullstack")}
+              onClick={() => activateTab("webDev")}
             >
-              Full Stack
+              Web Projects
             </button>
             <button
               className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${activeTab === "android"
@@ -190,11 +206,11 @@ const Projects = () => {
         </div>
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {activeTab === "fullstack" &&
-            fullStackProjects.map((project, index) => (
+          {activeTab === "webDev" &&
+            webDevProjects.map((project, index) => (
               <div
                 key={project.title}
-                className={`bg-white/10 dark:bg-black/30 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-black/20 dark:border-white/20 hover:scale-[1.01] transition-transform transition-all duration-700 delay-${(index + 1) * 100
+                className={`bg-white/10 dark:bg-black/30 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-black/20 dark:border-white/20 hover:scale-[1.01] transition-all duration-700 delay-${(index + 1) * 100
                   } ${isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -227,7 +243,7 @@ const Projects = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                     className="flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-black/40 rounded-lg text-black dark:text-white hover:bg-black/20 dark:hover:bg-black/50 transition-colors border border-black/20 dark:border-white/20 hover:border-black/30 dark:hover:border-white/30"
+                     className="flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-black/40 rounded-lg text-black dark:text-white hover:bg-black/20 dark:hover:bg-black/70 transition-colors border border-black/20 dark:border-white/20 hover:border-black/30 dark:hover:border-white/30"
                    >
                       <ExternalLink className="w-4 h-4 mr-1" />
                       Demo
@@ -237,7 +253,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-black/40 rounded-lg text-black dark:text-white hover:bg-black/20 dark:hover:bg-black/50 transition-colors border border-black/20 dark:border-white/20 hover:border-black/30 dark:hover:border-white/30"
+                    className="flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-black/40 rounded-lg text-black dark:text-white hover:bg-black/20 dark:hover:bg-black/70 transition-colors border border-black/20 dark:border-white/20 hover:border-black/30 dark:hover:border-white/30"
                   >
                     <Github className="w-4 h-4" />
                     <span className="text-sm font-medium">View Code</span>
@@ -250,7 +266,7 @@ const Projects = () => {
             androidProjects.map((project, index) => (
               <div
                 key={project.title}
-                className={`bg-white/10 dark:bg-black/30 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-black/20 dark:border-white/20 hover:scale-[1.01] transition-transform transition-all duration-700 delay-${(index + 1) * 100
+                className={`bg-white/10 dark:bg-black/30 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-black/20 dark:border-white/20 hover:scale-[1.01] transition-all duration-700 delay-${(index + 1) * 100
                   } ${isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -279,20 +295,21 @@ const Projects = () => {
                   </p>
                 </div>
                 <div className="flex space-x-4">
-                         <a
+                  {project.link!="#"?    <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-black/40 rounded-lg text-black dark:text-white hover:bg-black/20 dark:hover:bg-black/50 transition-colors border border-black/20 dark:border-white/20 hover:border-black/30 dark:hover:border-white/30"
-                  >
+                     className="flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-black/40 rounded-lg text-black dark:text-white hover:bg-black/20 dark:hover:bg-black/70 transition-colors border border-black/20 dark:border-white/20 hover:border-black/30 dark:hover:border-white/30"
+                   >
                       <ExternalLink className="w-4 h-4 mr-1" />
                       Demo
-                    </a>
+                    </a>:" "}
+                     
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-black/40 rounded-lg text-black dark:text-white hover:bg-black/20 dark:hover:bg-black/50 transition-colors border border-black/20 dark:border-white/20 hover:border-black/30 dark:hover:border-white/30"
+                    className="flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-black/40 rounded-lg text-black dark:text-white hover:bg-black/20 dark:hover:bg-black/70 transition-colors border border-black/20 dark:border-white/20 hover:border-black/30 dark:hover:border-white/30"
                   >
                     <Github className="w-4 h-4" />
                     <span className="text-sm font-medium">View Code</span>

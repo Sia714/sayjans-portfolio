@@ -8,7 +8,8 @@ const ThemeToggle = () => {
     const savedTheme = localStorage.getItem("theme");
     // Or check if system prefers dark mode
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return savedTheme === "dark" || (!savedTheme && prefersDark);
+    return savedTheme === "dark" || (!savedTheme && prefersDark)|| !savedTheme;
+
   });
 
   useEffect(() => {

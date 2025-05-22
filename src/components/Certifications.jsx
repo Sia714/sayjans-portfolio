@@ -229,7 +229,7 @@ const Certifications = () => {
                                                 href={cert.credentialUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-black/40 rounded-lg text-black dark:text-white hover:bg-black/20 dark:hover:bg-black/50 transition-colors border border-black/20 dark:border-white/20 hover:border-black/30 dark:hover:border-white/30"
+                                                className="flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-black/40 rounded-lg text-black dark:text-white hover:bg-black/20 dark:hover:bg-black/60 transition-colors border border-black/20 dark:border-white/20 hover:border-black/30 dark:hover:border-white/30"
                                             >
                                                 <span className="text-sm font-medium">View Credential</span>
                                                 <ExternalLink className="w-4 h-4" />

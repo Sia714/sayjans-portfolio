@@ -118,7 +118,7 @@ const About = () => {
                   {category.skills.map((skill) => (
                     <div
                       key={skill.name}
-                      className="flex items-center gap-2 p-2 rounded-lg bg-black/10 dark:bg-black/30 hover:bg-black/20 dark:hover:bg-black/40 transition-colors"
+                      className="flex items-center gap-2 p-2 rounded-lg bg-black/10 dark:bg-black/30 hover:bg-black/20 dark:hover:bg-black/50 transition-colors"
                     >
                       <span className="text-black dark:text-white">{skill.icon}</span>
                       <span className="text-black dark:text-white">{skill.name}</span>
